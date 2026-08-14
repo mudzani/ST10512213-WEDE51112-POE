@@ -20,3 +20,48 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section id="enquiry-form">
+            <h1>Adopt, Volunteer, or Sponsor</h1>
+            <p>Tell us how you'd like to help, and a member of our team will be in touch.</p>
+
+            <!-- Form has no working backend yet: client-side validation and submission
+                 handling are Part 3 requirements (JavaScript and forms). -->
+            <form action="#" method="post">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+
+                <!-- Enquiry type dropdown: satisfies the brief's NPO requirement that the
+                     enquiry page must allow visitors to enquire about volunteering or
+                     sponsoring, in addition to adopting. -->
+                <label for="enquiry-type">Enquiry Type</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="">-- Please select --</option>
+                    <option value="adopt">Adopt an animal</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="sponsor">Sponsor an animal</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paw Haven Animal Rescue. All rights reserved.</p>
+        <p>Follow us: Facebook | Instagram (links to be added)</p>
+    </footer>
+
+</body>
+</html>
