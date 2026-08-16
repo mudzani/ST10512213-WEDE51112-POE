@@ -28,15 +28,12 @@ Per Section 3.1 of the brief, this document records where each page's content ca
   Services).
 
 ## External sources actually used in Part 1
-Only one external source has been used so far — the domain-registration pricing figure
-in the Website Project Proposal's Budget section:
+- xneelo (2026) — domain-registration pricing figure, cited in the Budget section of the
+  Website Project Proposal and in README.md.
+- W3Schools (n.d.) — used as a learning reference for standard HTML formatting syntax, not
+  as a source of copied content. Cited in README.md.
 
-xneelo. 2026. Domain Name Search and Registration. [Online]. Available at:
-https://xneelo.co.za/domains/ [Accessed 11 August 2026].
+No external text, statistics, or claims have been used anywhere in the Part 1 content
+beyond what is listed above. Nothing has been copied from any website, textbook, or other
+student's work.
 
-This is cited in-text in the proposal document and listed in full here and in the README,
-per the brief's requirement that Part 1 references appear in both the proposal document and
-README.md.
-
-No other external text, statistics, or claims have been used anywhere in the Part 1
-content. Nothing has been copied from any website, textbook, or other student's work.
