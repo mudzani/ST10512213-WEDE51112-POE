@@ -62,7 +62,7 @@ Proposal document for both proposals in full and the selection rationale.
 - No external text content has been copied from any source; all page copy is original.
 
 ### Sitemap
- ![Sitemap](images/sitemap.png)  a 5-page hierarchy under a Home page, matching the file
+ ![Sitemap](images/sitemap.png)  a 4-page hierarchy under a Home page, matching the file
 structure below. All pages link to all other pages via a shared navigation menu.
 
 ### File and Folder Structure 

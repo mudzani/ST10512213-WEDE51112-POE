@@ -4,12 +4,11 @@ Per Section 3.1 of the brief, this document records where each page's content ca
 
 ## Home (index.html)
 - All text is original content written for this fictional organisation. No citation required.
-- Hero image: placeholder — see image-sourcing-plan.md.
 
 ## About (about.html)
 - History, mission, vision, and team descriptions are original content, developed from the
   organisation profile established in the Website Project Proposal document.
-- Team photo: placeholder — see image-sourcing-plan.md.
+- Team/shelter photo: AI-generated original illustration — see README References.
 
 ## Adopt (adopt.html)
 - All four animal profiles (Buddy, Whiskers, Nala, Max) are original fictional content
@@ -24,8 +23,7 @@ Per Section 3.1 of the brief, this document records where each page's content ca
 ## Contact (contact.html)
 - Both addresses are fictional, created to satisfy the brief's requirement for more than
   one mapped location. They do not correspond to real premises.
-- Map images: placeholders — real map embeds are a Part 3 requirement (Integrate External
-  Services).
+- Map images: placeholders — real map embeds are a Part 3 requirement 
 
 ## External sources actually used in Part 1
 - xneelo (2026) — domain-registration pricing figure, cited in the Budget section of the
