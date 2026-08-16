@@ -88,30 +88,36 @@ paw-haven-website/
 See [CHANGELOG.md](CHANGELOG.md).
 
 ## References
-the two proposals are listed in the Website Project Proposal
-document. is repeated here per the brief's requirement to compile all references in
-this README:
+References specific to the two proposals are listed in full in the Website Project
+Proposal document. All external sources used anywhere in Part 1 are compiled here:
 
-xneelo. 2026. Domain Name Search and Registration. [Online]. Available at:
+**Domain pricing (Budget section of the proposal):**
+xneelo. 2026. *Domain Name Search and Registration*. [Online]. Available at:
 https://xneelo.co.za/domains/ [Accessed 11 August 2026].
-thats were i learned and took same of the code 
 
-https://www.w3schools.com/html/html_formatting.asp( used to learn HTML and get code from there )
+**HTML syntax reference (used to learn standard formatting patterns, not to copy a
+finished solution):**
+W3Schools. n.d. *HTML Formatting Elements*. [Online]. Available at:
+https://www.w3schools.com/html/html_formatting.asp [Accessed 14 August 2026].
 
-Microsoft, 2026. Microsoft Word (created the wireframes) & https://www.drawio.com/
-website images
+**Wireframes (Figures 1–10 in the Website Project Proposal document):**
+These were developed with the assistance of  an AI tool, based on my
+own website planning content. They are original work, not sourced from an external
+website, template, or another author. and Also used https://www.drawio.com/ 
 
-Paw Haven logo
-Mudzani, D. 2026. Paw Haven Animal Rescue logo. [Personal drawing]. Pretoria: Unpublished.(The graphic was generated with the assistance of an AI image-generation tool for use as an original project asset.)
+**Website images — AI-generated original assets:**
+Mudzani, D. 2026. *Paw Haven Animal Rescue logo*. Pretoria: Unpublished. (Generated with
+the assistance of an AI image-generation tool for use as an original project asset.)
 
-Main shelter image
-Mudzani, D. 2026. Paw Haven main shelter illustration. [Personal drawing]. Pretoria: Unpublished.(The graphic was generated with the assistance of an AI image-generation tool for use as an original project asset.)
+Mudzani, D. 2026. *Paw Haven main shelter illustration*. Pretoria: Unpublished. (Generated
+with the assistance of an AI image-generation tool for use as an original project asset.)
 
-Weekend adoption venue image
-Mudzani, D. 2026. Paw Haven weekend adoption event venue illustration. [Personal drawing]. Pretoria: Unpublished.(The graphic was generated with the assistance of an AI image-generation tool for use as an original project asset.)
+Mudzani, D. 2026. *Paw Haven weekend adoption event venue illustration*. Pretoria:
+Unpublished. (Generated with the assistance of an AI image-generation tool for use as an
+original project asset.)
 
 
-
+**Website images**
 1. iStock — Learning about Cat Care
 iStock by Getty Images. n.d. Learning about Cat Care at an Animal Shelter [Photograph]. Available at: https://www.istockphoto.com/photo/learning-about-cat-care-at-an-animal-shelter-gm2151854408-572911823 (Accessed: 14 August 2026
 
