@@ -6,6 +6,10 @@
 - Module: Web Development (Introduction) —  WED5112POE
 - Institution: The Independent Institute of Education (The IIE), Rosebank College
 
+## GitHub Repository
+https://github.com/mudzani/ST10512213-WEDE51112-POE 
+
+
 ## Project Overview
 Paw Haven Animal Rescue is a fictional non-profit animal shelter based in Johannesburg,
 selected as the subject organisation for this Proof of Evidence (POE). The project is a
@@ -58,7 +62,7 @@ Proposal document for both proposals in full and the selection rationale.
 - No external text content has been copied from any source; all page copy is original.
 
 ### Sitemap
- ![Sitemap](images/sitemap.png)  a 4-page hierarchy under a Home page, matching the file
+ ![Sitemap](images/sitemap.png)  a 5-page hierarchy under a Home page, matching the file
 structure below. All pages link to all other pages via a shared navigation menu.
 
 ### File and Folder Structure 
