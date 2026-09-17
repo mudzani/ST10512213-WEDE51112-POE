@@ -43,3 +43,18 @@ h1 {
 h2 {
     font-size: 1.4rem;
 }
+
+p {
+    margin-bottom: 1rem;
+}
+
+/*LAYOUT STRUCTURE */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #3F6B4A;
+}
