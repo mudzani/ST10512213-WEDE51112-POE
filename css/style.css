@@ -17,3 +17,29 @@ img {
     height: auto;       /* height scales proportionally, keeping the photo undistorted */
     display: block;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/*TYPOGRAPHY*/
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', Verdana, sans-serif; /* rounded, friendly heading font per proposal */
+    color: #3F6B4A; /* forest-green accent from the Part 1 proposal */
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
