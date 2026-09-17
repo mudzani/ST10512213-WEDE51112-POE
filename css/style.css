@@ -161,3 +161,80 @@ input:focus, select:focus, textarea:focus {
     outline: 2px solid #3F6B4A; /* clear visual focus ring for keyboard users */
     outline-offset: 2px;
 }
+
+/* FORMS (Enquiry and Contact pages)*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+input, select, textarea {
+    padding: 0.6rem;
+    border: 1px solid #C9BBA5;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+form button {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+}
+
+/*RESPONSIVE DESIGN */
+
+/* ---- Tablet: 768px and below ---- */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.6rem; /* headings shrink slightly so they don't wrap awkwardly */
+    }
+
+    /* Highlight cards and animal cards each drop to two per row instead of four */
+    #highlights article,
+    #animal-list article {
+        flex: 1 1 45%;
+    }
+}
+
+/* ---- Mobile: 480px and below ---- */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;   /* logo stacks above the nav instead of sitting beside it */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;   /* nav links stack vertically instead of running in a row */
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    /* All cards become a single column on the smallest screens */
+    #highlights article,
+    #animal-list article {
+        flex: 1 1 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
