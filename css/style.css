@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box; /* padding/border are included in an element's width, not added on top */
 }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;           /* 1rem = the browser default, usually 16px */
+    line-height: 1.6;
+    color: #2E2A26;
+    background-color: #FAF3E9; /* cream base tone from the Part 1 Design & UX proposal */
+}
+
+img {
+    max-width: 100%;   /* image never grows wider than its container */
+    height: auto;       /* height scales proportionally, keeping the photo undistorted */
+    display: block;
+}
