@@ -58,3 +58,52 @@ header {
     background-color: #FFFFFF;
     border-bottom: 3px solid #3F6B4A;
 }
+
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;   /* centers the main content column on wide screens */
+    padding: 2rem;
+}
+
+/* Home page: three highlight cards sit side by side */
+#highlights {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#highlights article {
+    flex: 1 1 250px; /* grow, shrink, but prefer 250px — lets cards wrap on narrow screens */
+}
+
+/* Adopt page: four animal cards in a row that wraps */
+#animal-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+#animal-list article {
+    flex: 1 1 220px;
+}
+
+/* Contact page: two location cards side by side */
+#locations article {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: #3F6B4A;
+    color: #FAF3E9;
+}
