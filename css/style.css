@@ -1,0 +1,5 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* padding/border are included in an element's width, not added on top */
+}
