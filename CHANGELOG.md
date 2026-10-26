@@ -56,7 +56,7 @@ corrections address every criterion :
   corrected .
 
 
-
+##part 2
 - Created `css/style.css` and linked it from all 5 HTML pages.
 - Added a CSS reset and base site-wide styles (font, colours, box-sizing).
 - Styled typography (heading font, body font, sizes, spacing).
