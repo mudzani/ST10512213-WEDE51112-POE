@@ -13,7 +13,10 @@ Per Section 3.1 of the brief, this document records where each page's content ca
 ## Adopt (adopt.html)
 - All four animal profiles (Buddy, Whiskers, Nala, Max) are original fictional content
   created for this project. No real animals, real shelters, or real people are represented.
-- Animal photos: placeholders — see image-sourcing-plan.md.
+- Animal photos: `buddy.jpg`, `Whiskers.jpg`, `Nala.jpg`, and `Max.jpg`. Their exact
+  source-to-file mapping has not been verified. Two files visibly contain iStock
+  watermarks. See `image-source-audit.md`; the source list in README is not proof of a
+  licence.
 
 ## Enquiry (enquiry.html)
 - Form field structure (adopt/volunteer/sponsor enquiry types) is derived directly from the
@@ -23,7 +26,8 @@ Per Section 3.1 of the brief, this document records where each page's content ca
 ## Contact (contact.html)
 - Both addresses are fictional, created to satisfy the brief's requirement for more than
   one mapped location. They do not correspond to real premises.
-- Map images: placeholders — real map embeds are a Part 3 requirement 
+- Google Maps embeds and links show general Randburg and Fourways areas only. The
+  displayed street addresses are fictional and are not represented as exact map pins.
 
 ## External sources actually used in Part 1
 - xneelo (2026) — domain-registration pricing figure, cited in the Budget section of the
@@ -35,3 +39,13 @@ No external text, statistics, or claims have been used anywhere in the Part 1 co
 beyond what is listed above. Nothing has been copied from any website, textbook, or other
 student's work.
 
+## Part 3 functionality and external services
+- Search, filtering, sorting, image viewing, and browser-side form validation are
+  interactions written for this project.
+- Google Maps embeds and links use the Google Maps service. The embedded maps show
+  general areas only; the street addresses are fictional project details.
+- Both forms post data to the Google Apps Script web app configured in `js/script.js`.
+  The browser cannot read the `no-cors` response, so actual email or spreadsheet delivery
+  has not been confirmed. Do not claim successful delivery until it is tested.
+- The animal photographs' exact source-to-file mapping and permissions remain
+  unresolved. See `image-source-audit.md`.

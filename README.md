@@ -14,7 +14,7 @@ Paw Haven Animal Rescue is a fictional non-profit animal shelter based in Johann
 selected as the subject organisation for this Proof of Evidence (POE). The project is a
 5-page static website built progressively across three parts of the module: HTML foundation
 (Part 1), CSS styling and responsive design (Part 2), and JavaScript functionality and SEO
-(Part 3). This README currently documents **Part 1 & 2**.
+(Part 3). This README documents the work completed across Parts 1, 2 and 3.
 
 ## Website Goals and Objectives
 - Increase visibility of adoptable animals to raise adoption rates.
@@ -31,11 +31,12 @@ selected as the subject organisation for this Proof of Evidence (POE). The proje
 - Home page with a mission introduction and clear calls to action.
 - About page with organisational history, mission, vision, and team.
 - Adopt page listing animals currently available for adoption (fulfils the brief's
-  required Services/Products page for this organisation).
+  required Services/Products page for this organisation), with search, filters, sorting
+  and larger-image viewing.
 - Enquiry page with a form supporting adopt / volunteer / sponsor enquiries, as required
-  for a non-profit organisation.
-- Contact page listing two locations (main shelter and weekend adoption-event venue) and
-  a contact form.
+  for a non-profit organisation, including animal-specific enquiry links.
+- Contact page listing two fictional location examples (main shelter and weekend
+  adoption-event venue), general-area map embeds and a contact form.
 
 ## Timeline and Milestones
 - Week 1–2: Proposal drafting, research, and lecturer approval (Part 1).
@@ -76,11 +77,15 @@ ST10512213 WEDE51112 POE/
 ├── enquiry.html
 ├── contact.html
 ├── css/
-│   └── style.css         
+│   └── style.css
 ├── js/
-│   └──         
-├── images                         
+│   └── script.js
+├── images/
+├── evidence/
 ├── page-content-sources.md
+├── image-source-audit.md
+├── robots.txt
+├── sitemap.xml
 ├── README.md
 └── CHANGELOG.md
 ```
@@ -103,20 +108,20 @@ All 5 pages are linked to a single external stylesheet, `css/style.css`, via
 `style.css` is organised into clearly labelled sections matching the rubric:
 1. Reset / base style (universal box-sizing, base font, base colours)
 2. Typography (heading font, body font, sizes)
-3. Layout structure (Flexbox for the nav, the home-page highlight cards, and the
-   adopt-page animal cards)
+3. Layout structure (Flexbox for the header and CSS Grid for page sections, highlights,
+   animal profiles and responsive forms)
 4. Decoration and colour (the terracotta/cream/forest-green palette from the Part 1
    proposal's Design and User Experience section)
 5. Pseudo-classes (`:hover` on links and buttons, `:active` on buttons, `:focus` on
    form fields)
 
 ### Responsive Design
-Two breakpoints are used: 768px (tablet) and 480px (mobile).
-- **Layout:** the highlight cards and animal cards go from 4/3-per-row on desktop, to
-  2-per-row on tablet, to 1-per-row on mobile.
-- **Typography:** heading and body font sizes reduce slightly at each breakpoint.
-- **Navigation:** the nav switches from a horizontal row to a vertical stack on mobile,
-  with the logo above it instead of beside it.
+Two breakpoints are used: 900px (tablet layouts) and 600px (mobile layouts).
+- **Layout:** highlight and animal profile grids reduce to two columns at tablet widths
+  and stack at mobile widths. Forms, maps and About-page sections also fit narrow screens.
+- **Typography:** heading and body font sizes reduce at mobile widths.
+- **Navigation:** navigation wraps at tablet widths and becomes a two-column link grid on
+  mobile, with the logo above it.
 - **Images:** all images use `max-width: 100%; height: auto;` so they scale within
   their container at every screen size, rather than a fixed pixel size.
 
@@ -124,6 +129,54 @@ Screenshot evidence of desktop (1200px), tablet (768px), and mobile (375px) view
 the `evidence/` folder: `part2-desktop-home-1200px.png`, `part2-tablet-home-768px.png`,
 `part2-mobile-home-375px.png`, `part2-tablet-adopt-768px.png`,
 `part2-mobile-adopt-375px.png`, `part2-desktop-enquiry-1200px.png`.
+
+## Part 3 Details — JavaScript, forms, SEO and publishing
+
+### JavaScript functionality
+- The Adopt page can search profile text, filter by dog or cat, sort by name or age, and
+  show a no-results message when a search has no matches.
+- Animal photographs open in a dialog that can be opened by mouse or keyboard and closed
+  using its button or the Escape key.
+- Each animal profile links to the Enquiry page with that animal preselected. The About
+  page includes expandable answers using native `details` and `summary` elements.
+
+### Forms and validation
+- Both forms validate required fields in the browser and display field-level errors.
+- Adoption enquiries require an animal selection. The Contact form includes a message
+  type and optional phone number.
+- The forms post URL-encoded data to the configured Google Apps Script web app. The
+  browser uses `no-cors`, so it cannot read the response or confirm that an email or
+  spreadsheet entry was delivered. A successful browser request is not proof of delivery.
+- **Delivery has not been verified.** Check the connected spreadsheet and intended inbox
+  after a real, non-sensitive test from the published site. Do not claim delivery works
+  until that check succeeds. Local browser tests used a stubbed `fetch` and did not send
+  visitor information to the external handler.
+- Client-side validation is for usability and is not server-side security.
+
+### Maps and SEO
+- The Contact page embeds Google Maps searches for general Randburg and Fourways areas
+  and links to open those areas in Google Maps. The street addresses and opening times
+  are fictional project examples, not verified premises or exact map pins.
+- Each page has page-specific title and description metadata. `robots.txt` and
+  `sitemap.xml` use the expected GitHub Pages address; verify the address after
+  publication. No search ranking or live deployment is claimed.
+
+### Accessibility and responsive layout
+- Pages have a skip link, labelled main navigation, current-page indicators, keyboard
+  focus styles, and live status messages for forms and animal search results.
+- Reduced-motion preferences are respected. Responsive layouts were checked at mobile,
+  tablet and desktop viewport widths.
+
+### Checks completed and remaining work
+- `node --check js/script.js` and `git diff --check` passed.
+- Local browser checks covered animal search/filter/sort/empty results, mouse and keyboard
+  lightbox behavior, form validation, animal-link prefill, and form payload creation
+  with network requests stubbed.
+- Local page resource paths, unique HTML IDs, and `aria-describedby` references were
+  checked. `sitemap.xml` was checked for valid XML.
+- **Not completed:** real Apps Script delivery verification, live Google Maps testing,
+  GitHub push, or GitHub Pages deployment. Verify these manually before describing them
+  as working.
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md).

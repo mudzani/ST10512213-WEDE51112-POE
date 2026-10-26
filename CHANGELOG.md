@@ -74,3 +74,25 @@ corrections address every criterion :
   (horizontal → vertical stack), and images (`max-width: 100%; height: auto;`).
 - Updated README.md with the Part 2 section.
 
+## Part 3 — Functionality, forms, SEO and responsive improvements
+
+- Added page-specific keyword metadata and the shared accessible page structure while
+  preserving the existing website wording.
+- Added Adopt-page search, animal-type filtering, sorting, empty-state feedback,
+  keyboard-accessible photo viewing, and enquiry links that preselect an animal.
+- Added an expandable FAQ section to the About page.
+- Added client-side form validation, status feedback and a conditional animal selector
+  for adoption enquiries. Added contact message-type and optional phone fields.
+- Connected both forms to the configured Google Apps Script handler. Browser tests used
+  a stubbed `fetch`; no live submission was sent, and email/spreadsheet delivery remains
+  unverified.
+- Replaced the Contact page's placeholder map images with general Google Maps area
+  embeds and links. The fictional addresses and hours are not verified locations.
+- Added `robots.txt`, `sitemap.xml`, and `image-source-audit.md`. The sitemap URLs and
+  robots sitemap address must be checked after publishing.
+- Updated the responsive styles, keyboard focus indicators, skip navigation and reduced
+  motion support. Corrected local image path casing to match the existing asset files.
+- Checks completed: JavaScript syntax, whitespace, local resource paths, HTML ID and
+  description-reference checks, sitemap XML parsing, and local browser interaction
+  tests at mobile/tablet/desktop widths. Apps Script delivery, live maps, GitHub push
+  and deployment were not tested.

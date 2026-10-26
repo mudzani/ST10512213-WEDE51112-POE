@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mudzani.github.io/ST10512213-WEDE51112-POE/sitemap.xml

@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Paw Haven Animal Rescue</title>
     <meta name="description" content="Learn about Paw Haven Animal Rescue's story, mission, vision, and the volunteers who run the shelter.">
-     <link rel="stylesheet" href="css/style.css">
+    <meta name="keywords" content="about Paw Haven, animal rescue mission, animal shelter volunteers, responsible pet ownership">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Site header: logo and main navigation, identical on every page so the site
          feels consistent no matter which page a visitor lands on first -->
-    <header>
-        <img src="images/logo.png" alt="Paw Haven Animal Rescue logo"width="165" height="160">
-        <nav>
+    <header class="site-header">
+        <a class="logo-link" href="index.html" aria-label="Paw Haven home">
+            <img src="images/logo.png" alt="Paw Haven Animal Rescue logo" width="165" height="160">
+        </a>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
                 <li><a href="adopt.html">Adopt</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,48 +29,64 @@
         </nav>
     </header>
 
-    <main>
+    <!-- The main content introduces the organisation before its mission and team. -->
+    <main id="main-content">
         <!-- Our Story: builds trust with a first-time visitor by explaining how the
              organisation started, before asking them to adopt, donate, or volunteer -->
-        <section id="our-story">
+        <section id="our-story" class="page-intro content-card">
             <h1>Our Story</h1>
             <p>Paw Haven Animal Rescue began as a small volunteer effort to help the growing
                 number of stray and abandoned dogs and cats in our part of Johannesburg. What
                 started as a handful of foster homes has grown into a registered non-profit
                 organisation with a dedicated shelter space, a network of foster carers, and
                 a community of adopters, donors, and volunteers.</p>
-            <img src="images/Paw Haven shelter team and volunteers.png" alt="Paw Haven shelter team and volunteers" width="350" height="180">
+            <img class="feature-image" src="images/Paw Haven shelter team and volunteers.png" alt="Paw Haven shelter team and volunteers" width="350" height="180" loading="lazy">
         </section>
 
-<!-- Mission and Vision are kept short and separate from the story above so a
+        <!-- Mission and Vision are kept short and separate from the story above so a
              visitor skimming the page can find them quickly -->
-        <section id="mission-vision">
-            <h2>Our Mission</h2>
-            <p>To rescue, rehabilitate, and rehome abandoned and stray animals while promoting
-                responsible pet ownership within our community.</p>
-
-            <h2>Our Vision</h2>
-            <p>A community where every companion animal has a safe, permanent home.</p>
+        <section class="two-column-section" id="mission-vision">
+            <article class="content-card">
+                <h2>Our Mission</h2>
+                <p>To rescue, rehabilitate, and rehome abandoned and stray animals while promoting
+                    responsible pet ownership within our community.</p>
+            </article>
+            <article class="content-card">
+                <h2>Our Vision</h2>
+                <p>A community where every companion animal has a safe, permanent home.</p>
+            </article>
         </section>
 
         <!-- Team section: listed as roles rather than named individuals, since this is a
              fictional organisation created for the project rather than a real shelter -->
-        <section id="team">
+        <section id="team" class="content-card">
             <h2>Our Team</h2>
             <p>Paw Haven is run by a small core team supported by a wider group of regular
                 volunteers who assist with animal care, adoption events, and administration.</p>
-            <ul>
+            <ul class="content-list">
                 <li>Shelter Manager: oversees daily animal care and adoption processing.</li>
                 <li>Volunteer Coordinator: organises fostering, events, and new volunteer onboarding.</li>
                 <li>Veterinary Partner: provides health checks, vaccinations, and sterilisation.</li>
             </ul>
         </section>
+
+        <!-- These expandable answers add the reference's quick guidance without replacing existing copy. -->
+        <section id="help-faq" class="content-card">
+            <h2>Ways to Help</h2>
+            <details>
+                <summary>Can I help if I cannot adopt?</summary>
+                <p>Yes. Use the enquiry page to ask about volunteering or sponsoring animal care.</p>
+            </details>
+            <details>
+                <summary>How do I ask about an animal?</summary>
+                <p>Visit the Adopt page, choose an animal profile and use the enquiry form to send your question.</p>
+            </details>
+        </section>
     </main>
 
-    <footer>
+    <!-- Site footer: repeated identically on every page -->
+    <footer class="site-footer">
         <p>&copy; 2026 Paw Haven Animal Rescue. All rights reserved.</p>
-        <p>Follow us: Facebook | Instagram (links to be added)</p>
     </footer>
-
 </body>
 </html>

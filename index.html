@@ -6,17 +6,20 @@
     <title>Paw Haven Animal Rescue | Home</title>
     <meta name="description" content="Learn how Paw Haven Animal Rescue supports rescued dogs and cats and find out how to adopt, volunteer or sponsor animal care in Johannesburg.">
     <meta name="keywords" content="animal rescue Johannesburg, adopt a dog, adopt a cat, volunteer animal shelter, sponsor animal care">
-     <link rel="stylesheet" href="css/style.css">
-     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Site header: logo and main navigation, repeated identically on every page -->
-    <header>
-    <img src="images/logo.png" alt="Paw Haven Animal Rescue logo" width="165" height="160">
-        <nav>
+    <header class="site-header">
+        <a class="logo-link" href="index.html" aria-label="Paw Haven home">
+            <img src="images/logo.png" alt="Paw Haven Animal Rescue logo" width="165" height="160">
+        </a>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="adopt.html">Adopt</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
@@ -25,46 +28,47 @@
         </nav>
     </header>
 
-<main>
+    <!-- The main content introduces the rescue and the three main site pathways. -->
+    <main id="main-content">
         <!-- Hero section: first thing a visitor sees, establishes purpose and a clear call to action -->
-        <section id="hero">
-            <img src="images\Rescued dog and cat.webp"alt="Rescued dog and cat at Paw Haven shelter"width="350" height="180">
-            <h1>Give a Rescued Animal a Home</h1>
-            <p>Paw Haven Animal Rescue is a Johannesburg-based non-profit dedicated to rescuing,
-                rehabilitating, and rehoming abandoned and stray dogs and cats. Every animal in our
-                care receives a full health check, vaccinations, and steriliation before being made
-                available for adoption.</p>
-            <a href="adopt.html">View Adoptable Animals</a>
+        <section id="hero" class="hero-section">
+            <img class="hero-image" src="images/Rescued dog and cat.webp" alt="Rescued dog and cat at Paw Haven shelter" width="350" height="180">
+            <div class="hero-copy">
+                <h1>Give a Rescued Animal a Home</h1>
+                <p>Paw Haven Animal Rescue is a Johannesburg-based non-profit dedicated to rescuing,
+                    rehabilitating, and rehoming abandoned and stray dogs and cats. Every animal in our
+                    care receives a full health check, vaccinations, and steriliation before being made
+                    available for adoption.</p>
+                <a class="button-link" href="adopt.html">View Adoptable Animals</a>
+            </div>
         </section>
 
         <!-- Three highlight blocks summarising the main things a visitor can do on the site -->
-        <section id="highlights">
-            <article>
+        <section id="highlights" aria-label="Ways to get involved">
+            <article class="content-card">
                 <h2>Recently Rescued</h2>
                 <p>Meet the animals who have recently come into our care and are being prepared
                     for adoption.</p>
-                <a href="adopt.html">Meet them</a>
+                <a class="button-link" href="adopt.html">Meet them</a>
             </article>
-            <article>
+            <article class="content-card">
                 <h2>How to Adopt</h2>
                 <p>Our adoption process includes an enquiry, a meet-and-greet, and a short home
                     suitability check to make sure every match is a good one.</p>
-                <a href="enquiry.html">Start an enquiry</a>
+                <a class="button-link" href="enquiry.html">Start an enquiry</a>
             </article>
-            <article>
+            <article class="content-card">
                 <h2>Donate or Sponsor</h2>
                 <p>Not able to adopt right now? You can still help by sponsoring an animal's care
                     or making a donation towards veterinary costs.</p>
-                <a href="enquiry.html">Find out how</a>
+                <a class="button-link" href="enquiry.html">Find out how</a>
             </article>
         </section>
     </main>
 
     <!-- Site footer: repeated identically on every page -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Paw Haven Animal Rescue. All rights reserved.</p>
-        <p>Follow us: Facebook | Instagram (links to be added)</p>
     </footer>
-
 </body>
 </html>
