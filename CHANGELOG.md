@@ -69,14 +69,10 @@ The Part 2 feedback identified responsive navigation and responsive images as ar
 - Recorded static checks: JavaScript syntax passed; local file paths and image alt attributes were checked; no duplicate IDs were found by the checker; and `sitemap.xml` parsed as valid XML.
 - Browser interaction testing, pushing the latest changes to GitHub and live GitHub Pages deployment remain to be completed and verified.
 
-## Follow-up Improvements — Form Delivery and Submission Readiness 
+## Documentation Correction — Google Apps Script Form Submission
 
-- Added a configurable AJAX email-delivery path for both forms using FormSubmit's JSON endpoint.
-- Blocked the reserved `example.com` placeholder so the site does not falsely report a demonstration submission as delivered.
-- Added submission-in-progress feedback, disabled submit buttons while requests run, and added error handling intended to preserve visitor entries if delivery fails.
-- Updated the contact-form wording so it does not imply that an email draft is ready when no authorised recipient is configured.
-- Added FormSubmit AJAX documentation to the learning references and documented the first-time recipient activation requirement.
+- Corrected the README and this changelog to describe the Google Apps Script web app form handler already referenced by `js/script.js`, rather than the previously documented third-party form service. This is a documentation correction, not a newly implemented feature.
+- The existing browser code validates form fields, collects the form data, and sends a URL-encoded POST request to the endpoint configured by `PAW_HAVEN_FORM_ENDPOINT` using `fetch()` with `mode: 'no-cors'`.
+- The HTML `data-recipient` value is used by the browser code as a send/no-send check, but is not included in the request payload. The Apps Script server-side recipient or storage configuration and actual email delivery remain to be verified; the browser cannot confirm delivery from the opaque `no-cors` response.
 - Updated the image-sourcing notes to distinguish potential source pages from verified source-to-file matches. Image provenance and licensing remain unresolved and must not be described as complete.
 - Confirmed in the project notes that the map embeds show general area searches only; no exact premises or pins are claimed because the organisation and street addresses are fictional.
-
-

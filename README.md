@@ -6,8 +6,11 @@
 - Module: Web Development (Introduction) — WEDE5020 / WED5112POE
 - Institution: The Independent Institute of Education (The IIE), Rosebank College
 
-## GitHub Repository
-https://github.com/mudzani/ST10512213-WEDE51112-POE
+## Project Links
+
+- **Live website:** https://mudzani.github.io/ST10512213-WEDE51112-POE/
+- **GitHub repository:** https://github.com/mudzani/ST10512213-WEDE51112-POE
+
 
 ## Project Overview
 Paw Haven Animal Rescue is a fictional non-profit animal shelter based in Johannesburg,
@@ -17,25 +20,25 @@ selected as the subject organisation for this Portfolio of Evidence (POE). The p
 (Part 3). This README documents the development across Parts 1, 2 and 3.
 
 ## Website Goals and Objectives
-- Increase visibility of adoptable animals to raise adoption rates.
-- Grow one-off and recurring donations through a clear, trustworthy online presence.
-- Recruit volunteers for shelter and event-based roles.
-- Provide an easy way for the public to enquire before visiting, adopting, volunteering, or sponsoring.
+- Introduce the organisation and its animal-rescue purpose.
+- Present animal profiles in a way that visitors can browse.
+- Allow visitors to make adoption, volunteering and sponsorship enquiries.
+- Provide contact information and general location references.
+- Offer a consistent experience across desktop, tablet and mobile screen sizes.
 
 **Key Performance Indicators:**
 - Number of enquiry-form submissions per month.
 - Number of volunteer sign-up enquiries per month.
 - Time users spend browsing the adoptable-animals content.
 
-## Key Features and Functionality
-- Home page with a mission introduction and clear calls to action.
-- About page with organisational history, mission, vision, and team.
-- Adopt page listing animals currently available for adoption (fulfils the brief's
-  required Services/Products page for this organisation).
-- Enquiry page with a form supporting adopt / volunteer / sponsor enquiries, as required
-  for a non-profit organisation.
-- Contact page listing two locations (main shelter and weekend adoption-event venue) and
-  a contact form.
+## 3. Website Pages and Features
+| Page | Purpose and functionality |
+|---|---|
+| `index.html` | Homepage introducing Paw Haven and directing visitors to key sections of the website. |
+| `about.html` | Presents the fictional organisation's story, mission, vision and team information. Includes expandable information using native HTML disclosure elements. |
+| `adopt.html` | Displays animal profiles and provides search, animal-type filtering, sorting, empty-results feedback and larger-image viewing. |
+| `enquiry.html` | Provides an enquiry form for adoption, volunteering and sponsorship. Adoption enquiries can be linked to a selected animal. |
+| `contact.html` | Provides contact information, general-area Google Maps searches and a contact form.
 
 ## Timeline and Milestones
 - Week 1–2: Proposal drafting, research, and lecturer approval (Part 1).
@@ -139,9 +142,11 @@ the `evidence/` folder: `part2-desktop-home-1200px.png`, `part2-tablet-home-768p
 
 ### Forms and validation
 - `enquiry.html` validates the visitor's name, email, enquiry type, message, and the selected animal when the enquiry is about adoption.
-- Both forms are configured to use `donald.mudzani@gmail.com` as the recipient for asynchronous AJAX delivery through FormSubmit. The visitor stays on the page and receives a success or error message.
-- **Recipient configured; delivery not yet verified.** Both forms use `donald.mudzani@gmail.com`. FormSubmit may require first-time email activation: check the recipient inbox for its activation message, complete that step, publish the site, then test both forms and confirm the messages arrive. Do not claim successful delivery until the live test succeeds. FormSubmit is a third-party service; disclose its use and consider its handling of submitted personal data.
-- The JavaScript still blocks reserved `example.com` placeholders to avoid false delivery claims. Client-side validation is for usability and is not server-side security.
+- Both forms use a Google Apps Script web app as their form handler. Google Apps Script is Google's platform for running JavaScript in Google's cloud; a deployed web app can receive requests from a website and run server-side code. This is useful for this static GitHub Pages site because the site itself has no server to process form submissions.
+- In `js/script.js`, `PAW_HAVEN_FORM_ENDPOINT` is the configuration point for the deployed web app URL. The form code collects the entered fields with `FormData`, converts them to URL-encoded data, adds a `formType`, and sends a POST request to that endpoint. The deployed Apps Script is expected to process the request; its server-side code and configuration are not included in this project, so its exact actions must be checked in the Apps Script project.
+- **Recipient configuration needs verification.** The forms have a `data-recipient` value in their HTML. The JavaScript reads it only to decide whether to attempt submission and blocks placeholder values. Although that value is passed to the send function, the function does not add it to the request data or otherwise use it. Therefore the source code here does not show that the recipient is sent to or configured in the Apps Script. Check the Apps Script code and its deployment settings to confirm where messages or records go, and confirm the intended recipient there. Do not treat the HTML value as proof that an email address is connected.
+- **Three separate outcomes:** browser-side validation checks that required fields have acceptable values; a request is then attempted to the configured Apps Script URL; successful email delivery is a further server-side outcome that this browser code cannot confirm. The code uses `fetch()` with `mode: 'no-cors'`. This gives JavaScript an opaque response: it cannot read the response body or HTTP status to confirm what the web app did. A resolved `fetch()` therefore does not prove that the Apps Script processed the data or delivered an email. The page's success message reports that the request was sent to the handler, not that an email arrived.
+- To test the forms, first inspect the Apps Script server-side code and confirm its recipient or spreadsheet destination, then verify that the deployed web app URL in `PAW_HAVEN_FORM_ENDPOINT` points to the intended deployment and that its access settings allow the website request. Publish the site and submit a clearly identifiable test through both the Enquiry and Contact forms. Check the Apps Script executions/logs and the configured spreadsheet or recipient inbox (including spam) for each test. A browser success message alone is not delivery verification. Client-side validation improves usability; it is not server-side security.
 
 ### Maps and external services
 - The Contact page embeds Google Maps searches for the general Randburg and Fourways areas, and provides links to open each area in Google Maps.
@@ -208,12 +213,11 @@ Mozilla. n.d. *Client-side form validation*. MDN Web Docs. [Online]. Available a
 
 Mozilla. n.d. *Using HTML form validation and the Constraint Validation API*. MDN Web Docs. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation [Accessed 26 October 2026].
 
-FormSubmit. n.d. *Form submission with AJAX*. [Online]. Available at: https://formsubmit.co/ajax-documentation [Accessed 26 October 2026].
+Google. n.d. *Web apps*. Google Apps Script. [Online]. Available at: https://developers.google.com/apps-script/guides/web [Accessed 30 October 2026].
 
 Google. n.d. *SEO Starter Guide*. Google Search Central. [Online]. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide [Accessed 26 October 2026].
 
 GitHub. n.d. *What is GitHub Pages?*. GitHub Docs. [Online]. Available at: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages [Accessed 26 October 2026].
 
 Google. n.d. *Google Maps URLs*. Google Maps Platform. [Online]. Available at: https://developers.google.com/maps/documentation/urls/get-started [Accessed 26 October 2026].
-
 
