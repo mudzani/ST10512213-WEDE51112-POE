@@ -147,6 +147,13 @@ the `evidence/` folder: `part2-desktop-home-1200px.png`, `part2-tablet-home-768p
 - **Recipient configuration needs verification.** The forms have a `data-recipient` value in their HTML. The JavaScript reads it only to decide whether to attempt submission and blocks placeholder values. Although that value is passed to the send function, the function does not add it to the request data or otherwise use it. Therefore the source code here does not show that the recipient is sent to or configured in the Apps Script. Check the Apps Script code and its deployment settings to confirm where messages or records go, and confirm the intended recipient there. Do not treat the HTML value as proof that an email address is connected.
 - **Three separate outcomes:** browser-side validation checks that required fields have acceptable values; a request is then attempted to the configured Apps Script URL; successful email delivery is a further server-side outcome that this browser code cannot confirm. The code uses `fetch()` with `mode: 'no-cors'`. This gives JavaScript an opaque response: it cannot read the response body or HTTP status to confirm what the web app did. A resolved `fetch()` therefore does not prove that the Apps Script processed the data or delivered an email. The page's success message reports that the request was sent to the handler, not that an email arrived.
 - To test the forms, first inspect the Apps Script server-side code and confirm its recipient or spreadsheet destination, then verify that the deployed web app URL in `PAW_HAVEN_FORM_ENDPOINT` points to the intended deployment and that its access settings allow the website request. Publish the site and submit a clearly identifiable test through both the Enquiry and Contact forms. Check the Apps Script executions/logs and the configured spreadsheet or recipient inbox (including spam) for each test. A browser success message alone is not delivery verification. Client-side validation improves usability; it is not server-side security.
+### Form Submission Evidence
+
+Screenshots demonstrating the form submission process and recorded responses are available in the [evidence](evidence). 
+
+The evidence includes email responses received after submitting the Enquiry and Contact forms, as well as records stored in the Google Sheets spreadsheet connected to the form handler.
+
+These screenshots provide supporting evidence of the form-handling process. They should be considered alongside the implementation details and limitations described in the Forms and Validation section.
 
 ### Maps and external services
 - The Contact page embeds Google Maps searches for the general Randburg and Fourways areas, and provides links to open each area in Google Maps.
