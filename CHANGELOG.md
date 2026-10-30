@@ -1,98 +1,82 @@
 # Changelog
 
-All notable changes to this project are documented here, in the order they were made.
+All notable changes to Paw Haven Animal Rescue are recorded below in chronological order.
 
-## Part 1 — Building the Foundation
+## Part 1  Building the Foundation
 
- Drafted two website project proposals (Paw Haven Animal Rescue; Kelder & Vine) for
-  lecturer approval.
-- Created low-fidelity wireframes for both proposed organisations (5 pages each).
+- Drafted two website project proposals for Paw Haven Animal Rescue and Kelder & Vine for lecturer approval.
+- Created low-fidelity wireframes for both proposed organisations.
 - Selected Paw Haven Animal Rescue as the organisation for the full POE.
-- Created the sitemap for the selected organisation.
-- Set up the project folder structure (root HTML files, css/, js/, images/).
-- Built the HTML foundation for all 5 required pages (index, about, adopt, enquiry,
-  contact) using semantic HTML5 elements and a consistent header/nav/footer.
-- Added a logo and  illustrations (main shelter, weekend venue).
-- Added real photographs for the four adoptable animals and the homepage hero image.
-- Adjusted image dimensions across pages for visual consistency.
-- Refactored code structure for readability.
-- Added README and CHANGELOG files, and documented content sourcing.
+- Created the sitemap and established the project folder structure, including the HTML pages and `css/`, `js/` and `images/` folders.
+- Built the HTML foundation for the five required pages: `index.html`, `about.html`, `adopt.html`, `enquiry.html` and `contact.html`, using semantic HTML and a consistent header, navigation and footer.
+- Added the logo, venue illustrations, animal photographs and homepage hero image.
+- Adjusted image dimensions for visual consistency and refactored code for readability.
+- Added the README, this changelog and content-sourcing documentation.
 - Added the GitHub repository link to the project documentation.
 
-## Fixes applied after review
+## Fixes Applied After Review
 
-- Corrected three broken image references caused by a filename case mismatch
-  (`whiskers.jpg`/`nala.jpg`/`max.jpg` → `Whiskers.jpg`/`Nala.jpg`/`Max.jpg`), which
-  would have failed to load on case-sensitive hosting such as GitHub Pages.
-- Fixed a missing space between HTML attributes (e.g. `alt="..."width="..."`) across
-  all five pages, which was invalid HTML.
-- Fixed a Windows-style backslash in an image path on the homepage.
-- Reformatted the domain-pricing citation back to full Harvard style.
+- Corrected animal image filename casing (`whiskers.jpg`, `nala.jpg` and `max.jpg` to `Whiskers.jpg`, `Nala.jpg` and `Max.jpg`) to match the actual files and avoid broken images on case-sensitive hosting.
+- Corrected missing spaces between HTML attributes across the five pages.
+- Replaced a Windows-style backslash in the homepage image path with a forward slash.
+- Reformatted the domain-pricing citation into Harvard-style reference format.
 
 ## Part 1 Official Feedback Response
 
-Official Part 1 feedback was received (Formative 1 Part 1, WEDE5020). The following
-corrections address every criterion :
+The following updates were recorded in response to the Part 1 feedback:
 
-- **Website Structure and Planning (Sitemap) .** The sitemap image existed
-   **Fix:** added a new,
-  properly headed "Website Structure and Planning: Sitemap" section (Heading 2) directly
-  after the two proposals, containing the sitemap image and its caption on its own.
-- **Comments .** `about.html`  **Fix:** added meaningful comments to `about.html` explaining the
-  Our Story, Mission/Vision, and Team sections, matching the density and purpose of the
-  comments already present on the other four pages.
-- **Budget  a second, deeper fix.**  **Fix:** added both, with real researched South
-  African market rates (freelance 5-page site build: R7,000-R25,000; maintenance
-  retainer: R2,000-R12,000/month; Sharma, 2026)
-- **References and wireframe captions  a second real regression found and fixed.** An
-  earlier fix session corrected the domain citation and wireframe attribution, All 10
-  wireframe captions read "[Personal drawing]" here, and the reference list still
-  credited "Microsoft Word (created the wireframes) & drawio.com" .
+- **Website structure and planning — sitemap:** Added a clearly headed sitemap section and included the sitemap image with its caption.
+- **HTML comments:** Added explanatory comments to `about.html` for the Our Story, Mission/Vision and Team sections.
+- **Budget:** Added researched South African pricing estimates for a five-page website and ongoing maintenance. The supporting source must remain in the reference list and the figures should be presented as estimates, not fixed market prices.
+- **README and project documentation:** Expanded the README with Part 2 information and corrected the file-structure documentation.
+- **References and wireframe attribution:** Reviewed the domain-pricing citation and wireframe attribution. The wireframe captions and reference list should be checked against the actual proposal before submission to ensure they accurately describe the work and sources.
 
-- **README .** Expanded with a full Part 2 section, corrected file-structure
-  block, and resolved internal 
-- **References  .** The domain-pricing citation was reformatted to full
-  Harvard style (it had regressed to a bare link), and the wireframe citation was
-  corrected .
+## Part 2  CSS Styling and Responsive Design
+
+- Created `css/style.css` and linked the external stylesheet from all five HTML pages.
+- Added reset and base styles, including box sizing, font settings and site-wide colours.
+- Styled typography, including heading and body fonts, sizes and spacing.
+- Used Flexbox for the navigation, homepage highlight cards and adopt-page animal cards.
+- Applied the proposed terracotta, cream and forest-green colour palette.
+- Added interactive CSS pseudo-classes, including `:hover` for links and buttons, `:active` for buttons and `:focus` for form fields.
+- Corrected a CSS specificity issue that caused navigation links to inherit button styling.
+- Added tablet and mobile media queries at 768px and 480px. These adjust card columns, typography, navigation and image sizing.
+- Used responsive image rules (`max-width: 100%; height: auto;`) so images can scale within their containers.
+- Updated the README with the Part 2 implementation details and responsive screenshot evidence.
+
+## Part 3  Improvements in Response to Part 2 Feedback 
+
+The Part 2 feedback identified responsive navigation and responsive images as areas needing further improvement. The following changes were recorded to address those issues:
+
+- **Responsive navigation:** Updated the small-screen navigation so it can wrap on narrower screens and use a two-column link grid on narrow mobile screens.
+- **Responsive images:** Kept images constrained to their containers and corrected the case of animal image paths so the links match the actual filenames. The image layout should still be checked at desktop, tablet and mobile widths.
+- **Responsive layout:** Updated content grids to use fewer columns as the available screen width decreases.
+- **Keyboard accessibility:** Added a skip-navigation link and visible keyboard-focus indicators. Reduced-motion support was also added.
+- **CSS consistency:** Reviewed the responsive rules and interactive styling alongside the navigation and layout changes.
+- **README and supporting documentation:** Added Part 3 implementation notes, limitations, deployment steps and technical references.
 
 
-##part 2
-- Created `css/style.css` and linked it from all 5 HTML pages.
-- Added a CSS reset and base site-wide styles (font, colours, box-sizing).
-- Styled typography (heading font, body font, sizes, spacing).
-- Built the layout using Flexbox: header/nav, home-page highlight cards, and
-  adopt-page animal cards.
-- Applied the Part 1 proposal's colour palette (terracotta, cream, forest-green)
-  as decoration and colour styling.
-- Added pseudo-classes: `:hover` on links/buttons, `:active` on buttons, `:focus`
-  on form fields.
-- Fixed a CSS specificity bug where nav links were incorrectly styled as buttons
-  (both `a[href]` and `nav a` matched, and the attribute selector won by default ,
-  changed the button rule to a plain `a` selector so `nav a` correctly overrides it).
-- Added two media query breakpoints (768px tablet, 480px mobile) adjusting layout
-  (cards go 4→2→1 per row), typography (smaller headings/body text), navigation
-  (horizontal → vertical stack), and images (`max-width: 100%; height: auto;`).
-- Updated README.md with the Part 2 section.
+## Part 3  JavaScript Functionality, Forms, SEO and Deployment Preparation 
 
-## Part 3 — Functionality, forms, SEO and responsive improvements
+- Added page-specific title tags, meta descriptions and relevant keyword phrases to the five pages.
+- Added `js/script.js` for animal search, dog/cat filtering, sorting, an image lightbox, enquiry responses and form validation.
+- Updated animal-profile enquiry links so they can preselect the adoption enquiry and relevant animal on `enquiry.html`.
+- Added validation and on-page guidance for adoption, volunteer and sponsorship enquiries.
+- Updated the contact form to collect a name, email address, optional phone number, message type and message.
+- Embedded Google Maps area searches for Randburg and Fourways and added links to open those areas in Google Maps. The organisation's addresses and opening hours are fictional project details, not verified premises.
+- Added `robots.txt` and `sitemap.xml` using the expected GitHub Pages URL.
+- Documented the current form-delivery limitations, map behaviour, deployment steps and additional technical references in the README.
+- Recorded static checks: JavaScript syntax passed; local file paths and image alt attributes were checked; no duplicate IDs were found by the checker; and `sitemap.xml` parsed as valid XML.
+- Browser interaction testing, pushing the latest changes to GitHub and live GitHub Pages deployment remain to be completed and verified.
 
-- Added page-specific keyword metadata and the shared accessible page structure while
-  preserving the existing website wording.
-- Added Adopt-page search, animal-type filtering, sorting, empty-state feedback,
-  keyboard-accessible photo viewing, and enquiry links that preselect an animal.
-- Added an expandable FAQ section to the About page.
-- Added client-side form validation, status feedback and a conditional animal selector
-  for adoption enquiries. Added contact message-type and optional phone fields.
-- Connected both forms to the configured Google Apps Script handler. Browser tests used
-  a stubbed `fetch`; no live submission was sent, and email/spreadsheet delivery remains
-  unverified.
-- Replaced the Contact page's placeholder map images with general Google Maps area
-  embeds and links. The fictional addresses and hours are not verified locations.
-- Added `robots.txt`, `sitemap.xml`, and `image-source-audit.md`. The sitemap URLs and
-  robots sitemap address must be checked after publishing.
-- Updated the responsive styles, keyboard focus indicators, skip navigation and reduced
-  motion support. Corrected local image path casing to match the existing asset files.
-- Checks completed: JavaScript syntax, whitespace, local resource paths, HTML ID and
-  description-reference checks, sitemap XML parsing, and local browser interaction
-  tests at mobile/tablet/desktop widths. Apps Script delivery, live maps, GitHub push
-  and deployment were not tested.
+## Follow-up Improvements — Form Delivery and Submission Readiness 
+
+- Added a configurable AJAX email-delivery path for both forms using FormSubmit's JSON endpoint.
+- Blocked the reserved `example.com` placeholder so the site does not falsely report a demonstration submission as delivered.
+- Added submission-in-progress feedback, disabled submit buttons while requests run, and added error handling intended to preserve visitor entries if delivery fails.
+- Updated the contact-form wording so it does not imply that an email draft is ready when no authorised recipient is configured.
+- Added FormSubmit AJAX documentation to the learning references and documented the first-time recipient activation requirement.
+- Updated the image-sourcing notes to distinguish potential source pages from verified source-to-file matches. Image provenance and licensing remain unresolved and must not be described as complete.
+- Confirmed in the project notes that the map embeds show general area searches only; no exact premises or pins are claimed because the organisation and street addresses are fictional.
+
+
